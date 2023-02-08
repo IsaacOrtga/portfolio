@@ -1,0 +1,267 @@
+$background: #f4eeee;
+$mainfont: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial,
+  sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+/* FUENTES */
+
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url("../fonts/websymbols-regular-webfont.eot");
+  src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded"),
+    url("../fonts/websymbols-regular-webfont.woff") format("woff"),
+    url("../fonts/websymbols-regular-webfont.ttf") format("truetype"),
+    url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular")
+      format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SearsTower";
+  src: url("../fonts/searsTower.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  font-family: $mainfont;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+// ---- NAVBAR:
+.navbar {
+  animation: fromAbove 300ms linear;
+  display: flex;
+  height: 110px;
+  flex-direction: row;
+  margin-top: 3%;
+  width: 100%;
+}
+.title {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  font-size: 12px;
+  margin-left: 5%;
+  transition: 300ms;
+  width: 40%;
+}
+.title:hover {
+  transform: scale(1.2, 1.2);
+}
+.title h1,
+h3,
+a {
+  color: black;
+  text-decoration: none;
+}
+.logo > h2 {
+  color: #5babcd;
+  font-family: "WebSymbolsRegular";
+  font-size: 25px;
+}
+.logo > h2 > span {
+  color: rgb(40, 39, 39);
+  font-family: "SearsTower";
+}
+.navMenu {
+  display: flex;
+  // margin-right: 0%;
+  flex-direction: row;
+  width: 60%;
+  justify-content: end;
+}
+.navList {
+  margin-right: 5%;
+}
+.navList > li {
+  color: black;
+  display: block;
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px;
+}
+.navList > li > a {
+  color: black;
+  display: block;
+  font-family: $mainfont;
+  font-size: 23px;
+  text-decoration: none;
+  transition: all 500ms;
+}
+.navMenu ul li a:hover {
+  color: #5babcd;
+  transform: scale(1.2, 1.2);
+}
+@keyframes fromAbove {
+  from {
+    transform: translateY(-150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+// ---- GENERAL CONTAINER:
+.generalContainer {
+  flex-direction: row;
+  display: flex;
+  margin-top: 6%;
+}
+.mainContainer {
+  background-color: $background;
+  height: 100%;
+  width: 70%;
+}
+#langContainer {
+  background-color: $background;
+  display: flex;
+  height: 12rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+#langContainer img {
+  height: 10rem;
+  width: 15rem;
+  padding: 6px;
+  scroll-snap-align: center;
+}
+.projects {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.lastProject {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.project {
+  width: 80%;
+}
+.project img {
+  box-shadow: 0 0 0.2rem $background, 0 0 0.2rem $background,
+    0 0 2rem $background, 0 0 0.8rem #222225, 0 0 2.8rem #222225,
+    inset 0 0 1.3rem #222225;
+  border-radius: 10px;
+  // filter: grayscale(100%);
+  width: 100%;
+}
+.oldProjects {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.emancipatic {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.presentation {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.presentation img {
+  // filter: grayscale(100%);
+  border-radius: 10px;
+  height: 300px;
+}
+.presentation p {
+  float: right;
+  width: 80%;
+}
+
+.asideContainer {
+  text-align: center;
+  margin-left: 2%;
+  width: 28%;
+}
+.skillsContainer{
+  background-color: $background;
+}
+.skillsContainer h3{
+  margin-top: 0%;
+}
+.asideContainer ul li {
+  list-style: none;
+  font-size: 20px;
+  text-decoration: underline;
+  padding: 6px;
+}
+.lateralContainer {
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+.contactContainer{
+  float: left;
+  margin-top: 10%;
+  margin-left: 6%;
+}
+#linkedin {
+  color: #0a66c2;
+  font-family: "WebSymbolsRegular";
+  font-size: 5rem;
+  padding: 20%;
+  height: 6rem;
+  width: 5rem;
+}
+#git {
+  height: 5.1rem;
+  padding: 20%;
+  width: 5rem;
+}
+#gmail {
+  height: 5.1rem;
+  padding: 20%;
+  width: 5rem;
+}
+.lateral .overlay {
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 10rem;
+  margin-top: -5rem;
+  position: absolute;
+  opacity: 0;
+  padding: 5px;
+  text-shadow: 0px 0px 1px #ccc;
+  transform: translateX(-80%);
+  transition: all 400ms;
+}
+.lateral:hover .overlay {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.social:hover {
+  box-shadow: 5px 5px 5px gray;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.footerLangs {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+}
+.langsTitle {
+  text-align: center;
+}
+.imgFooter {
+  text-align: center;
+}
+.footerLangs img {
+  width: 100px;
+}
+.gifDev img {
+  width: 300px;
+}
